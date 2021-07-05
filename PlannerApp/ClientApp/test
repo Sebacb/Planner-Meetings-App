@@ -1,0 +1,40 @@
+import React from 'react';
+import {Text as ReactNativeText} from 'react-native';
+import {useTranslation} from 'react-i18next';
+import {presets} from './text.presets';
+import {mergeAll, flatten} from 'ramda';
+
+/**
+ * For your text displaying needs.
+ *
+ * This component is a HOC over the built-in React Native one.
+ */
+export function Text(props) {
+  // grab the props
+  const {
+    preset = 'default',
+    tx,
+    txOptions,
+    text,
+    children,
+    style,
+    withText,
+    ...rest
+  } = props;
+
+  const {t} = useTranslation();
+
+  // figure out which content to use
+  const i18nText = tx && t(tx, txOptions);
+  let content = i18nText || text || children;
+
+  // const style =
+  //   styleOverride &&
+  //   mergeAll(flatten([presets[preset] || presets.default, styleOverride]));
+
+  return (
+    <ReactNativeText {...rest} style={style}>
+      {withText ? content + text : content}
+    </ReactNativeText>
+  );
+}

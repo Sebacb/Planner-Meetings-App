@@ -1,0 +1,119 @@
+.homePageContainer {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.homePageCombined {
+    margin: auto;
+}
+
+.homePageMessage {
+    padding-top: 5%;
+    align-self: center;
+    text-align: center;
+    color: #101e22;
+}
+
+.homePageCenteredButton {
+    margin: 0 auto !important;
+    width: 70px !important;
+    height: 70px !important;
+    display: flex;
+}
+
+.welcomePageMyReservationsButton {
+    width: 40px;
+    border: none;
+    height: 40px;
+    background: #101e22;
+    color: white;
+    border-radius: 50%;
+    margin-top: 15%;
+    margin-left: 15%
+}
+
+.welcomePageMyReservationsButton:hover {
+    background: #333630;
+}
+
+.welcomePageMyReservationsButton:focus {
+    outline: none;
+    background: #333630;
+}
+
+.welcomePageCeneterdButton {
+    border: none;
+    background: #101e22;
+    color: white;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.welcomePageCeneterdButton:hover{
+    background: #333630;
+}
+.welcomePageCeneterdButton:focus{
+    outline: none;
+}
+
+.homePageCenteredButton svg {
+    flex: auto;
+    align-self: center;
+    color: white;
+}
+
+.homePageCenteredButton:hover {
+    cursor: pointer;
+}
+
+/* @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro'); */
+
+.blob {
+    background: black;
+    /* border-radius: 50%; */
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+    margin: 10px;
+    /* height: 20px; */
+    /* width: 20px; */
+    transform: scale(1);
+    animation: pulse-black 2s infinite;
+}
+
+@keyframes pulse-black {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
+
+.blob.white {
+    background: #e02a0f;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
+    animation: pulse-white 2s infinite;
+}
+
+@keyframes pulse-white {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}

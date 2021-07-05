@@ -1,0 +1,26 @@
+.container-flex {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.forgot-paper-container {
+  margin-top: 10em;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.resetPasswordButton {
+  margin-top: 1em !important;
+  margin-bottom: 1em !important;
+}
+.successReset {
+  color: #60ab23;
+  margin-bottom: 1em;
+}
+.failedReset {
+  color: #ac0c0f;
+  margin-bottom: 1em;
+}
